@@ -1,0 +1,13 @@
+# Copyright (C) 2014 ACL Floating Cart for WooCommerce
+# This file is distributed under the same license as the ACL Floating Cart for WooCommerce package.
+msgid ""
+msgstr ""
+"Project-Id-Version: ACL Floating Cart for WooCommerce 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/acl-floating-cart-for-woocommerce\n"
+"POT-Creation-Date: 2014-04-07 11:28:06+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: AmaderCode Lab <amadercode@gmail.com>\n"
+"Language-Team: ACL Translator <amadercode@gmail.com>\n"

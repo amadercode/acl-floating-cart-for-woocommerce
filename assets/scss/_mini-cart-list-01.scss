@@ -1,0 +1,150 @@
+/***
+**Flying Image
+*****/
+.focawo-floting-cart-trigger {
+  position: fixed;
+  right: 10px;
+  z-index: 999999;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px #999;
+  top: 50%;
+  text-align: center;
+  min-width: 80px;
+  transition: 0.5s;
+  //@extend %floating-cart-branding;
+  background-color: $acl-primary-color;
+  color: #ffffff;
+}
+
+.focawo-floting-cart-trigger {
+  &.focawo-floting-cart-trigger-activated {
+    transform: rotate(45deg);
+    top: 100px;
+    right: 340px;
+  }
+
+  .focawo-floting-trigger-item-count {
+    width: 100%;
+    padding: 10px 5px;
+    position: relative;
+    min-height: 50px;
+    box-sizing: border-box;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      height: 23px;
+      top: -17px;
+      border: 2px solid $acl-primary-color;
+      border-bottom: none;
+      border-radius: 30px;
+    }
+  }
+
+  .focawo-floting-trigger-cart-total {
+    width: 100%;
+    padding: 5px;
+    min-height: 30px;
+    box-sizing: border-box;
+  }
+}
+
+
+.focawo-floating-cart {
+  position: fixed;
+  right: -320px;
+  z-index: 999999;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-left: 1px solid #f5f5f5;
+  background-color: $acl-floating-cart-bg;
+  transition: 0.5s;
+
+
+  &.focawo-floating-cart-activated {
+    right: 0;
+  }
+
+  .focawo-floating-cart-inner {
+    position: relative;
+    height: calc(100% - 50px);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 0 0;
+
+    .focawo-floating-cart-item-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      //padding: 10px;
+
+      font-size: 14px;
+
+      .focawo_cart_content {
+        height: 100%;
+        overflow: auto;
+        padding: 10px;
+      }
+
+      @import "cart-table";
+    }
+  }
+
+  .focawo-floating-cart-header {
+    top: 0;
+    background: $acl-primary-color;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 16px;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    h3 {
+      font-size: 24px;
+      line-height: 100%;
+      margin: 0;
+      color: #ffffff;
+    }
+  }
+
+  .focawo-floating-cart-footer {
+    bottom: 0;
+    background: #ffffff;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 100%;
+        list-style: none;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        a {
+          padding: 10px;
+          box-sizing: border-box;
+          color: #fff;
+          text-align: center;
+          background: darken($acl-primary-color, 20%);
+          display: block;
+          text-decoration: none;
+          height: 50px;
+          line-height: 30px;
+        }
+      }
+
+    }
+
+  }
+
+}

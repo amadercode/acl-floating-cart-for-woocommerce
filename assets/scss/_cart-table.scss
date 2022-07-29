@@ -1,0 +1,178 @@
+.focawo-cart-table {
+  display: table;
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid #eeeeee;
+  font-size: 14px;
+  line-height: 1.2;
+
+  & > div {
+    display: table-row;
+
+    &:hover {
+      .focawo-remove-cart-item {
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(odd) {
+      & > div {
+        background-color: #F5F5F5;
+      }
+    }
+
+    &:last-child {
+      & > div {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+
+    & > div {
+      display: table-cell;
+      padding: 10px 5px;
+      position: relative;
+      vertical-align: top;
+      border-bottom: 1px solid #eeeeee;
+
+      a {
+        font-size: 16px;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      dl.variation {
+        font-size: 80%;
+        display: table;
+        margin: 0;
+
+        dt, dd {
+          display: table-cell;
+          padding: 3px;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .focawo-cart-item-quantity-oparation {
+        display: table;
+        margin-top: 5px;
+        width: 80px;
+        border: 1px solid #CCCCCC;
+        border-radius: 3px;
+
+        & > div {
+          display: table-cell;
+
+          &.focawo-cart-item-decreament, &.focawo-cart-item-increament {
+            cursor: pointer;
+            padding: 4px 8px;
+            line-height: 100%;
+
+            &:hover {
+              background-color: #CCCCCC;
+            }
+          }
+
+          &.focawo-cart-item-qnty-number {
+            border-left: 1px solid #CCCCCC;
+            border-right: 1px solid #CCCCCC;
+
+            input[type="number"] {
+              width: 100%;
+              border: none;
+              background: none;
+              padding: 0 !important;
+              height: auto !important;
+              margin: 0 !important;
+              text-align: center;
+              line-height: 12px;
+              font-size: 12px;
+
+              &:focus {
+                box-shadow: none;
+              }
+
+              &::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                margin: 0;
+              }
+
+            }
+          }
+        }
+      }
+
+
+      .focawo-remove-cart-item {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 999;
+
+        button {
+          padding: 2px;
+          line-height: 7px;
+          border-radius: 50%;
+          transition: 0.5s;
+          color: #FFF;
+          display: block;
+          height: 15px;
+          width: 15px;
+          background-color: red;
+          box-sizing: border-box;
+          text-decoration: none;
+          box-shadow: none;
+          cursor: pointer;
+          border: none;
+          font-size: 10px;
+
+          &:hover {
+            background: red;
+          }
+        }
+      }
+
+      &.focawo-cart-thumb-cell {
+        width: 80px;
+
+        img {
+          //width: 50px;
+        }
+      }
+
+      &.focawo-cart-title-cell {
+        a {
+          word-break: break-word;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          max-height: 55px;
+          font-size: 14px;
+          line-height: 120%;
+
+        }
+      }
+
+      &.focawo-cart-price-cell {
+        text-align: right;
+        white-space: nowrap;
+      }
+
+
+    }
+  }
+}

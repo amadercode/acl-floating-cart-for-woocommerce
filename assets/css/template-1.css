@@ -1,0 +1,351 @@
+#animated-product-image-box {
+  position: absolute;
+  z-index: 99999;
+  width: 60px;
+}
+
+@keyframes flyingProductRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loaderAmin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#animated-product-image-box img {
+  animation: flyingProductRotate 1s infinite;
+}
+
+/*Cart Trigger*/
+@keyframes cartTriggerAnim {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(50px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(-10px);
+  }
+}
+.new-product-item-added {
+  animation: cartTriggerAnim 0.6s infinite;
+  animation-delay: 0.5s;
+}
+
+.focawo-floating-cart ::-webkit-scrollbar {
+  width: 8px;
+}
+.focawo-floating-cart ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.focawo-floating-cart ::-webkit-scrollbar-thumb {
+  background: #6b3ff1;
+  border-radius: 10px;
+}
+.focawo-floating-cart ::-webkit-scrollbar-thumb:hover {
+  background: #6b3ff1;
+}
+
+#focawo-cart-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  height: 100%;
+}
+#focawo-cart-loader:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  animation: loaderAmin 0.6s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -27px;
+  margin-top: -27px;
+  border-radius: 50%;
+  border: 10px solid;
+  border-top-color: #ff402f;
+  border-bottom-color: #8b61ff;
+  border-left-color: #44803b;
+  border-right-color: #feff39;
+}
+
+/***
+**Flying Image
+*****/
+.focawo-floting-cart-trigger {
+  position: fixed;
+  right: 10px;
+  z-index: 999999;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px #999;
+  top: 50%;
+  text-align: center;
+  min-width: 80px;
+  transition: 0.5s;
+  background-color: #6b3ff1;
+  color: #ffffff;
+}
+
+.focawo-floting-cart-trigger.focawo-floting-cart-trigger-activated {
+  transform: rotate(45deg);
+  top: 100px;
+  right: 340px;
+}
+.focawo-floting-cart-trigger .focawo-floting-trigger-item-count {
+  width: 100%;
+  padding: 10px 5px;
+  position: relative;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+.focawo-floting-cart-trigger .focawo-floting-trigger-item-count:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 23px;
+  top: -17px;
+  border: 2px solid #6b3ff1;
+  border-bottom: none;
+  border-radius: 30px;
+}
+.focawo-floting-cart-trigger .focawo-floting-trigger-cart-total {
+  width: 100%;
+  padding: 5px;
+  min-height: 30px;
+  box-sizing: border-box;
+}
+
+.focawo-floating-cart {
+  position: fixed;
+  right: -320px;
+  z-index: 999999;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-left: 1px solid #f5f5f5;
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+.focawo-floating-cart.focawo-floating-cart-activated {
+  right: 0;
+}
+.focawo-floating-cart .focawo-floating-cart-inner {
+  position: relative;
+  height: calc(100% - 50px);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px 0 0;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo_cart_content {
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table {
+  display: table;
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid #eeeeee;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div {
+  display: table-row;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div:hover .focawo-remove-cart-item {
+  opacity: 1;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div:nth-child(odd) > div {
+  background-color: #F5F5F5;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div:last-child > div {
+  font-size: 16px;
+  line-height: 16px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div {
+  display: table-cell;
+  padding: 10px 5px;
+  position: relative;
+  vertical-align: top;
+  border-bottom: 1px solid #eeeeee;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div a {
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div a:hover {
+  text-decoration: none;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div dl.variation {
+  font-size: 80%;
+  display: table;
+  margin: 0;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div dl.variation dt, .focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div dl.variation dd {
+  display: table-cell;
+  padding: 3px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div dl.variation p {
+  margin-bottom: 0;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation {
+  display: table;
+  margin-top: 5px;
+  width: 80px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div {
+  display: table-cell;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-decreament, .focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-increament {
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 100%;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-decreament:hover, .focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-increament:hover {
+  background-color: #CCCCCC;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-qnty-number {
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-qnty-number input[type=number] {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  text-align: center;
+  line-height: 12px;
+  font-size: 12px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-qnty-number input[type=number]:focus {
+  box-shadow: none;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-qnty-number input[type=number]::-webkit-inner-spin-button, .focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-cart-item-quantity-oparation > div.focawo-cart-item-qnty-number input[type=number] ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-remove-cart-item {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 999;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-remove-cart-item button {
+  padding: 2px;
+  line-height: 7px;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #FFF;
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  border: none;
+  font-size: 10px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div .focawo-remove-cart-item button:hover {
+  background: red;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div.focawo-cart-thumb-cell {
+  width: 80px;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div.focawo-cart-title-cell a {
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  max-height: 55px;
+  font-size: 14px;
+  line-height: 120%;
+}
+.focawo-floating-cart .focawo-floating-cart-inner .focawo-floating-cart-item-wrapper .focawo-cart-table > div > div.focawo-cart-price-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+.focawo-floating-cart .focawo-floating-cart-header {
+  top: 0;
+  background: #6b3ff1;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 16px;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+.focawo-floating-cart .focawo-floating-cart-header h3 {
+  font-size: 24px;
+  line-height: 100%;
+  margin: 0;
+  color: #ffffff;
+}
+.focawo-floating-cart .focawo-floating-cart-footer {
+  bottom: 0;
+  background: #ffffff;
+}
+.focawo-floating-cart .focawo-floating-cart-footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.focawo-floating-cart .focawo-floating-cart-footer ul li {
+  width: 100%;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.focawo-floating-cart .focawo-floating-cart-footer ul li a {
+  padding: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  background: #390ebc;
+  display: block;
+  text-decoration: none;
+  height: 50px;
+  line-height: 30px;
+}
+
+/*# sourceMappingURL=template-1.css.map */
